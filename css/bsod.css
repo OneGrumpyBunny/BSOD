@@ -1,0 +1,122 @@
+body {
+  background-color: #000000;
+}
+
+/*Base scene */
+#monitor {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 1800px;
+  height: 1100px;
+  border-radius: 100px;
+  border-style: solid;
+  border-color: #aaaaaa;
+  border-width: 15px;
+  background-color: #ffffff;
+  z-index: 1;
+}
+
+#screen {
+  position: absolute;
+  top: 117px;
+  left: 117px;
+  width: 1600px;
+  height: 900px;
+  border-style: inset;
+  border-width: 3px;
+  background-color: #6cf7c9;
+  z-index: 2;
+}
+
+#glass {
+  position: absolute;
+  top: 87px;
+  left: 87px;
+  width: 1666px;
+  height: 966px;
+  background-color: rgba(0,0,0,0.1);
+  z-index: 100;
+  display:none;
+}
+
+#stand-upright {
+  position: absolute;
+  top: 1120px;
+  left: 840px;
+  width: 160px;
+  height: 200px;
+  background-color: #aaaaaa;
+  z-index: 1;
+}
+
+#stand-base {
+  position: absolute;
+  top: 1320px;
+  left: 600px;
+  width: 640px;
+  height: 40px;
+  background-color: #aaaaaa;
+  border-radius: 20px;
+  z-index: 1;
+}
+/*End of base scene */
+
+/* One Grumpy Bunny Contribution BSOD */
+#bluescreen {
+	background: #000080;
+    color: #fff;
+    z-index: 96;
+    top: 120px;
+    left: 120px;
+    width: 1600px;
+    height: 900px;
+    position: absolute;
+    font-family: 'courier';
+	border-radius:5px;
+	display:none;
+}
+#bluescreen > p {
+  padding-left:15px;
+  font-size: 30px;
+}
+.screenblur {
+  /*text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9);
+	color: rgba(0, 0, 0, 0);
+	opacity: 0.5;*/
+  
+  animation: distort-screen 2s ease-in 1 forwards;
+}
+@keyframes distort-screen {
+  100% {filter: blur(20px) hue-rotate(231deg);}
+}
+
+#BSOD-fix-btn {
+    position: absolute;
+    top:15%;
+	left:15%;
+    padding: 10px 20px;
+    animation: button-blink .7s ease-in infinite;
+    cursor: pointer;
+    z-index: 100;
+    width: 500px;
+    display:none;
+}
+#BSOD-break-btn {
+    position: absolute;
+	bottom: 1%;
+    left: 3%;
+    padding: 10px 20px;
+    width: 85px;
+    height: 85px;
+    /*animation: button-blink .7s ease-in infinite;*/
+    cursor:pointer;
+    z-index:5;
+}
+
+.buttonDepress {
+	transform:scale(.9);
+}
+@keyframes button-blink {
+  0% { color: #ddd;}
+}
